@@ -6,4 +6,6 @@
   tasks:
   - name: Install htop
     apt: name=htop
+  - name: Install mosh
+    apt: name=mosh
 
