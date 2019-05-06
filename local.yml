@@ -4,8 +4,9 @@
       become: yes
   become: true
   tasks:
-  - name: Install htop
-    apt: name=htop
-  - name: Install mosh
-    apt: name=mosh
-
+  - name: Install packages
+    apt: name={{item}}
+    with_items:
+      - htop
+      - mc
+      - tmux
